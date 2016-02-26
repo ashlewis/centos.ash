@@ -1,0 +1,7 @@
+.vagrant
+puphpet/files/private/build.conf
+puphpet/puppet
+puphpet/ruby
+puphpet/shell
+puphpet/vagrant
+Vagrantfile
