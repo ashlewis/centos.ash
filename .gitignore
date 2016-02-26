@@ -1,5 +1,6 @@
 .vagrant
 puphpet/files/private/build.conf
+puphpet/files/ssh
 puphpet/puppet
 puphpet/ruby
 puphpet/shell
