@@ -79,6 +79,7 @@ server:
         - zsh
         - gitflow
         - nano
+        - curl-devel
 users_groups:
     install: '1'
     groups: {  }
@@ -240,6 +241,8 @@ php:
         error_reporting: '-1'
         session.save_path: /var/lib/php/session
         date.timezone: UTC
+        memory_limit: 512M
+        max_execution_time: 300
     fpm_ini:
         error_log: /var/log/php-fpm.log
     fpm_pools:
