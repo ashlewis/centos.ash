@@ -297,6 +297,9 @@ ruby:
                 - deep_merge
                 - activesupport
                 - vine
+                - compass
+                - sass
+                - compass-rgbapng
 python:
     install: '1'
     packages: {  }

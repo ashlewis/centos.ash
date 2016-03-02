@@ -17,6 +17,7 @@
 [core]
         autocrlf = false
         whitespace = cr-at-eol
-        editor = vim
+        editor = nano
+        fileMode = false
 [credential]
         helper = cache --timeout=3600
