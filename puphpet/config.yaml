@@ -36,6 +36,9 @@ vagrantfile:
                                 vflmnfp_bvgy3zl64wit:
                                     host: '3002'
                                     guest: '3002'
+                                vflmnfp_l64witbvgy3z:
+                                    host: '8888'
+                                    guest: '8888'
                         hostname: centos.ash
                         memory: '4096'
                         cpus: '1'
@@ -231,6 +234,7 @@ php:
             - mcrypt
             - gd
             - mbstring
+            - soap
         pear:
             - PHP_CodeSniffer
         pecl:
@@ -313,6 +317,7 @@ nodejs:
         - grunt-cli
         - gulp
         - uglify-js
+        - browser-sync
 hhvm:
     install: '0'
     nightly: 0
