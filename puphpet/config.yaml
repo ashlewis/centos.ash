@@ -83,6 +83,7 @@ server:
         - gitflow
         - nano
         - curl-devel
+        - libpng-devel
 users_groups:
     install: '1'
     groups: {  }

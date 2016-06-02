@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Constantly show cursor position (display line numbers)
+set const
