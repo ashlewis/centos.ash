@@ -19,27 +19,27 @@ vagrantfile:
                         check_guest_tools: 0
                         update_guest_tools: 0
                 machines:
-                    vflm_pn488jcimozh:
-                        id: centos_ash
+                    vflm_ao2fxep4scdz:
+                        id: d8_ash
+                        hostname: d8.ash
                         network:
-                            private_network: 192.168.60.101
+                            private_network: 192.168.60.102
                             forwarded_port:
-                                vflmnfp_apfcftqrppe5:
+                                vflmnfp_zaw0wa095lsj:
                                     host: '8080'
                                     guest: '80'
-                                vflmnfp_tik693t8hqb8:
+                                vflmnfp_xhn04uf3nc5y:
                                     host: '3000'
                                     guest: '3000'
-                                vflmnfp_p3yleg01hr3n:
+                                vflmnfp_xhrxsnht3i1d:
                                     host: '3001'
                                     guest: '3001'
-                                vflmnfp_bvgy3zl64wit:
+                                vflmnfp_hykwysrbowpi:
                                     host: '3002'
                                     guest: '3002'
-                                vflmnfp_l64witbvgy3z:
+                                vflmnfp_mftevitbhtzb:
                                     host: '8888'
                                     guest: '8888'
-                        hostname: centos.ash
                         memory: '4096'
                         cpus: '1'
         provision:
@@ -72,7 +72,6 @@ vagrantfile:
         https: ''
         ftp: ''
         no_proxy: ''
-        enabled: ''
 server:
     install: '1'
     packages:
@@ -99,7 +98,7 @@ locale:
 firewall:
     install: '1'
     rules:
-        fr_w5ll90vu6bmr:
+        fr_wofk7h790cmt:
             port:
                 - '445'
             priority: '100'
@@ -120,7 +119,7 @@ nginx:
         names_hash_bucket_size: 128
     upstreams: {  }
     vhosts:
-        nxv_4isv4fl94wjc:
+        nxv_w8fyskx5ccxh:
             server_name: awesome.dev
             server_aliases:
                 - www.awesome.dev
@@ -140,10 +139,8 @@ nginx:
             rewrite_to_https: '1'
             spdy: '1'
             locations:
-                nxvl_w5sqk4q5oqv8:
+                nxvl_jrlum25nqih1:
                     location: /
-                    autoindex: 'off'
-                    internal: 'false'
                     try_files:
                         - $uri
                         - $uri/
@@ -153,10 +150,8 @@ nginx:
                     fastcgi_split_path: ''
                     proxy: ''
                     proxy_redirect: ''
-                nxvl_lpseucgehi90:
+                nxvl_yzf8ryzq3iyh:
                     location: '~ \.php$'
-                    autoindex: 'off'
-                    internal: 'false'
                     try_files:
                         - $uri
                         - $uri/
@@ -183,11 +178,11 @@ apache:
         manage_group: false
         sendfile: 0
     modules:
+        - headers
         - proxy_fcgi
         - rewrite
-        - headers
     vhosts:
-        av_qvqvor7mwc61:
+        av_2qozjyt31f5d:
             servername: awesome.dev
             serveraliases:
                 - www.awesome.dev
@@ -199,14 +194,14 @@ apache:
                 - 'Authorization "(.*)" HTTP_AUTHORIZATION=$1'
             custom_fragment: ''
             ssl: '0'
-            ssl_cert: ''
-            ssl_key: ''
-            ssl_chain: ''
-            ssl_certs_dir: ''
+            ssl_cert: 
+            ssl_key: 
+            ssl_chain: 
+            ssl_certs_dir: 
             ssl_protocol: ''
             ssl_cipher: ''
             directories:
-                avd_dmd9vv9e49ta:
+                avd_qwz8wvd0u6yx:
                     path: /var/www/awesome
                     options:
                         - Indexes
@@ -218,16 +213,20 @@ apache:
                         - 'all granted'
                     custom_fragment: ''
                     files_match:
-                        avdfm_qqx6g0kswixg:
+                        avdfm_8adlgzb3g34f:
                             path: \.php$
                             sethandler: 'proxy:fcgi://127.0.0.1:9000'
                             custom_fragment: ''
                             provider: filesmatch
                     provider: directory
+letsencrypt:
+    install: '0'
+    settings:
+    domains:
 php:
     install: '1'
     settings:
-        version: '54'
+        version: '56'
     modules:
         php:
             - cli
@@ -247,11 +246,11 @@ php:
         session.save_path: /var/lib/php/session
         date.timezone: UTC
         memory_limit: 512M
-        max_execution_time: 300
+        max_execution_time: '300'
     fpm_ini:
         error_log: /var/log/php-fpm.log
     fpm_pools:
-        phpfp_q7jvxhun7gbp:
+        phpfp_j9b183xopyv1:
             ini:
                 prefix: www
                 listen: '127.0.0.1:9000'
@@ -290,11 +289,11 @@ wpcli:
     version: v0.21.1
 drush:
     install: '1'
-    version: 7.0.0-alpha3
+    version: 8.1.2
 ruby:
     install: '1'
     versions:
-        rv_snytmfrdsyx1:
+        rv_gm5jvyz5ahtl:
             default: '1'
             bundler: '1'
             version: 1.9.3
@@ -342,15 +341,15 @@ mariadb:
         override_options: {  }
     adminer: 0
     users:
-        mariadbnu_qajteder0tfm:
+        mariadbnu_a0wh0e0s10d9:
             name: dbuser
             password: '123'
     databases:
-        mariadbnd_l8vc9i1u64e5:
+        mariadbnd_d1u9i17v02xe:
             name: dbname
             sql: ''
     grants:
-        mariadbng_2mgc5i3a2k58:
+        mariadbng_ec697qglwoen:
             user: dbuser
             table: '*.*'
             privileges:
@@ -425,7 +424,7 @@ elastic_search:
         version: 2.1.0
         java_install: true
     instances:
-        esi_sazt2126c97q:
+        esi_h5diob8fztlt:
             name: es-01
 solr:
     install: '1'
