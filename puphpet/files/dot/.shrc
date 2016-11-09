@@ -7,3 +7,5 @@ export PATH=/usr/local/bin:$PATH
 
 # composer for updated drush
 export PATH=$PATH:$HOME/.composer/vendor/bin
+
+source "$HOME/.console/console.rc" 2>/dev/null

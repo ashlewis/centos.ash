@@ -235,6 +235,7 @@ php:
             - gd
             - mbstring
             - soap
+            - mongo
         pear:
             - PHP_CodeSniffer
         pecl:
@@ -298,11 +299,11 @@ ruby:
             bundler: '1'
             version: 1.9.3
             gems:
-                - deep_merge
-                - activesupport
-                - vine
-                - compass
-                - sass
+                - deep_merge@1.0.1
+                - activesupport@4.2.6
+                - vine@0.2
+                - compass@1.0.3
+                - sass@3.4.22 
                 - compass-rgbapng
 python:
     install: '1'
@@ -377,7 +378,7 @@ postgresql:
     grants: {  }
     adminer: 0
 mongodb:
-    install: '0'
+    install: '1'
     settings:
         bind_ip: 127.0.0.1
         port: '27017'
