@@ -235,12 +235,9 @@ php:
             - gd
             - mbstring
             - soap
-            - mongo
         pear:
             - PHP_CodeSniffer
         pecl:
-            - APC
-            - uploadprogress
     ini:
         display_errors: 'On'
         error_reporting: '-1'
@@ -289,7 +286,7 @@ wpcli:
     install: '0'
     version: v0.21.1
 drush:
-    install: '1'
+    install: '0'
     version: 8.1.2
 ruby:
     install: '1'
@@ -378,7 +375,7 @@ postgresql:
     grants: {  }
     adminer: 0
 mongodb:
-    install: '1'
+    install: '0'
     settings:
         bind_ip: 127.0.0.1
         port: '27017'
