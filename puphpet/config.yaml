@@ -355,7 +355,7 @@ mariadb:
 mysql:
     install: '1'
     settings:
-        version: '5.5'
+        version: '5.7'
         root_password: root
         override_options: {  }
     adminer: 0
