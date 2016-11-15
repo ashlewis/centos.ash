@@ -1,3 +1,4 @@
+puphpet/config-custom.yaml
 .vagrant
 puphpet/files/private/build.conf
 puphpet/files/ssh
