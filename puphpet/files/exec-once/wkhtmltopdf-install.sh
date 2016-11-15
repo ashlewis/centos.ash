@@ -1,4 +1,4 @@
 #!/bin/bash
 #
 cd ~
-wget http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-centos6-amd64.rpm && yum localinstall -y wkhtmltox-0.12.2.1_linux-centos6-amd64.rpm
+wget https://bitbucket.org/wkhtmltopdf/wkhtmltopdf/downloads/wkhtmltox-0.13.0-alpha-7b36694_linux-centos7-amd64.rpm && yum localinstall -y wkhtmltox-0.13.0-alpha-7b36694_linux-centos7-amd64.rpm

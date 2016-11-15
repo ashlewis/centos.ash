@@ -19,25 +19,25 @@ vagrantfile:
                         check_guest_tools: 0
                         update_guest_tools: 0
                 machines:
-                    vflm_3ut935ftrqjt:
+                    vflm_h0jnqeuwse4m:
                         id: centos7_dev
                         hostname: centos7.dev
                         network:
-                            private_network: 192.168.60.104
+                            private_network: 192.168.60.105
                             forwarded_port:
-                                vflmnfp_qltr1qjsmhmy:
+                                vflmnfp_tdnoh4qyrvuv:
                                     host: '8080'
                                     guest: '80'
-                                vflmnfp_8yfobnkwz7li:
+                                vflmnfp_hp2vnj0yofct:
                                     host: '3000'
                                     guest: '3000'
-                                vflmnfp_dlshmweepw9j:
+                                vflmnfp_7acexyrjq3uj:
                                     host: '3001'
                                     guest: '3001'
-                                vflmnfp_vjx5xa371456:
+                                vflmnfp_2vf8mjxsx8l5:
                                     host: '3002'
                                     guest: '3002'
-                                vflmnfp_4x5q6bfpr3fr:
+                                vflmnfp_9xkemyd4r017:
                                     host: '8888'
                                     guest: '8888'
                         memory: '4096'
@@ -100,7 +100,7 @@ locale:
 firewall:
     install: '1'
     rules:
-        fr_gcgxc5b63u7d:
+        fr_avgimiwu84lg:
             port:
                 - '445'
             priority: '100'
@@ -122,7 +122,7 @@ nginx:
         names_hash_bucket_size: 128
     upstreams: {  }
     vhosts:
-        nxv_h7tr8qan8dav:
+        nxv_3ysvl3qzb8vb:
             server_name: awesome.dev
             server_aliases:
                 - www.awesome.dev
@@ -138,7 +138,7 @@ nginx:
             rewrite_to_https: '1'
             spdy: '1'
             locations:
-                nxvl_y7b3l7xyo06m:
+                nxvl_zu3s7tcox7w2:
                     www_root: ''
                     location: /
                     try_files:
@@ -150,7 +150,7 @@ nginx:
                     fastcgi_split_path: ''
                     proxy: ''
                     proxy_redirect: ''
-                nxvl_culafj32yjqs:
+                nxvl_gig0mkxlefem:
                     www_root: ''
                     location: '~ \.php$'
                     try_files:
@@ -183,7 +183,7 @@ apache:
         - proxy_fcgi
         - rewrite
     vhosts:
-        av_yr185oo628oo:
+        av_fftqch2rod7e:
             servername: rcr.centos7.ash
             serveraliases:
                 - www.rcr.centos7.ash
@@ -199,7 +199,7 @@ apache:
             ssl_protocol: ''
             ssl_cipher: ''
             directories:
-                avd_x11cdmorg2xh:
+                avd_wmu7ljtzemrm:
                     path: /var/www/rcr/website/
                     options:
                         - Indexes
@@ -211,7 +211,7 @@ apache:
                         - 'all granted'
                     custom_fragment: ''
                     files_match:
-                        avdfm_181qwt4471fa:
+                        avdfm_7fsso3207cak:
                             path: \.php$
                             sethandler: 'proxy:fcgi://127.0.0.1:9000'
                             custom_fragment: ''
@@ -247,7 +247,7 @@ php:
     fpm_ini:
         error_log: /var/log/php-fpm.log
     fpm_pools:
-        phpfp_70zhzclai4do:
+        phpfp_fiw9hq7ecquo:
             ini:
                 prefix: www
                 listen: '127.0.0.1:9000'
@@ -290,7 +290,7 @@ drush:
 ruby:
     install: '1'
     versions:
-        rv_ho7evv5d44c2:
+        rv_z8mymf7jwsxr:
             default: '1'
             bundler: '1'
             version: 2.3.1
@@ -337,15 +337,15 @@ mariadb:
         override_options: {  }
     adminer: 0
     users:
-        mariadbnu_9hvdo6vjmdrm:
+        mariadbnu_aylhsvuthjds:
             name: dbuser
             password: '123'
     databases:
-        mariadbnd_qd0ymcnq20va:
+        mariadbnd_68x9kukrrfu7:
             name: dbname
             sql: ''
     grants:
-        mariadbng_5kt9afyeuy7c:
+        mariadbng_rjbgrodu0505:
             user: dbuser
             table: '*.*'
             privileges:
@@ -420,7 +420,7 @@ elastic_search:
         version: 2.1.0
         java_install: true
     instances:
-        esi_u4htxibr2u8u:
+        esi_xgaz5hexwpsh:
             name: es-01
 solr:
     install: '1'
