@@ -184,11 +184,11 @@ apache:
         - rewrite
     vhosts:
         av_fftqch2rod7e:
-            servername: rcr.centos7.ash
+            servername: site.centos7.dev
             serveraliases:
-                - www.rcr.centos7.ash
-                - 'rcr.centos7.ash.*'
-            docroot: /var/www/rcr/website/
+                - www.site.centos7.dev
+                - 'site.centos7.dev.*'
+            docroot: /var/www/site/website/
             port: '80'
             custom_fragment: ''
             ssl: '0'
@@ -200,7 +200,7 @@ apache:
             ssl_cipher: ''
             directories:
                 avd_wmu7ljtzemrm:
-                    path: /var/www/rcr/website/
+                    path: /var/www/site/website/
                     options:
                         - Indexes
                         - FollowSymlinks
