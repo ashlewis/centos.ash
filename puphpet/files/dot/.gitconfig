@@ -1,6 +1,6 @@
 [user]
-        name = ash@s8080.com
-        email = ash@s8080.com
+        name = user@example.com
+        email = user@example.com
 [color]
         ui = true
 [alias]
