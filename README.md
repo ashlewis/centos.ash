@@ -26,5 +26,5 @@ to manually achieve the same:
 3) sudo su 
 4) echo <VAGRANT_PASSWORD> | passwd vagrant --stdin
 5) echo <ROOT_PASSWORD> | passwd root --stdin
-6 (echo "<VAGRANT_PASSWORD>"; echo "<VAGRANT_PASSWORD>") | smbpasswd -s -a vagrant
-7 (echo "<ROOT_PASSWORD>"; echo "<ROOT_PASSWORD>") | smbpasswd -s -a root
+6) (echo "<VAGRANT_PASSWORD>"; echo "<VAGRANT_PASSWORD>") | smbpasswd -s -a vagrant
+7) (echo "<ROOT_PASSWORD>"; echo "<ROOT_PASSWORD>") | smbpasswd -s -a root
