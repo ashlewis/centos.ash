@@ -15,3 +15,16 @@
 Currently drush will not install with puppet or custom script
 On VM:
 1. composer global require drush/drush
+
+
+UPDATE:
+
+For some reason samba-setup.sh script is no longer able to set ssh and samba share passwords,
+to manually achieve the same:
+1) vagrant ssh
+2) exec bash
+3) sudo su 
+4) echo <VAGRANT_PASSWORD> | passwd vagrant --stdin
+5) echo <ROOT_PASSWORD> | passwd root --stdin
+6 (echo "<VAGRANT_PASSWORD>"; echo "<VAGRANT_PASSWORD>") | smbpasswd -s -a vagrant
+7 (echo "<ROOT_PASSWORD>"; echo "<ROOT_PASSWORD>") | smbpasswd -s -a root
