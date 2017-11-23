@@ -22,8 +22,8 @@ UPDATE:
 For some reason samba-setup.sh script is no longer able to set ssh and samba share passwords,
 to manually achieve the same:
 1) vagrant ssh
-2) exec bash
-3) sudo su 
+2) sudo su 
+3) exec bash
 4) echo <VAGRANT_PASSWORD> | passwd vagrant --stdin
 5) echo <ROOT_PASSWORD> | passwd root --stdin
 6) (echo "<VAGRANT_PASSWORD>"; echo "<VAGRANT_PASSWORD>") | smbpasswd -s -a vagrant
