@@ -1,13 +1,14 @@
 #!/bin/bash
 #
-VAGRANT_CORE_FOLDER=$(cat '/.puphpet-stuff/vagrant-core-folder.txt')
 
-OS=$(/bin/bash "${VAGRANT_CORE_FOLDER}/shell/os-detect.sh" ID)
-RELEASE=$(/bin/bash "${VAGRANT_CORE_FOLDER}/shell/os-detect.sh" RELEASE)
-CODENAME=$(/bin/bash "${VAGRANT_CORE_FOLDER}/shell/os-detect.sh" CODENAME)
+PUPHPET_CORE_DIR=/opt/puphpet
+
+OS=$(/bin/bash "${PUPHPET_CORE_DIR}/shell/os-detect.sh" ID)
+RELEASE=$(/bin/bash "${PUPHPET_CORE_DIR}/shell/os-detect.sh" RELEASE)
+CODENAME=$(/bin/bash "${PUPHPET_CORE_DIR}/shell/os-detect.sh" CODENAME)
 
 
-CONFIG_FILE=${VAGRANT_CORE_FOLDER}/files/private/build.conf
+CONFIG_FILE=${PUPHPET_CORE_DIR}/files/private/build.conf
 
 if [[ -f $CONFIG_FILE ]]; then
     . $CONFIG_FILE
