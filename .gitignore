@@ -8,3 +8,4 @@ puphpet/ruby
 puphpet/shell
 puphpet/vagrant
 Vagrantfile
+.idea/*
